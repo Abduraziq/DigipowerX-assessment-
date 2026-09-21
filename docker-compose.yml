@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  inference-api:
+    build: .
+    container_name: neo-cloudz-inference
+    ports:
+      - "8000:8000"
+    environment:
+      DEBUG: "false"
+      REQUEST_TIMEOUT_SECONDS: "6.0"
+      QUEUE_LIMIT: "3"
+    volumes:
+      - ./data:/app/data

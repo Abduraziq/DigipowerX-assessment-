@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: neo-cloudz-config
+  namespace: default
+data:
+  REQUEST_TIMEOUT_SECONDS: "6.0"
+  QUEUE_LIMIT: "3"
+  MAX_RETRIES: "2"
+  DEFAULT_CUSTOMER: "demo"
